@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box } from "@mui/material";
+import AppBar from "./AppBar";
+import { Route, Routes } from "react-router-dom";
+import FormScreen from "./FormScreen";
+import CreateForm from "./CreateForm";
+import { useState } from "react";
 
 function App() {
+  const [selectedScreen, setSelectedScreen] = useState("");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      <AppBar
+        selectedScreen={selectedScreen}
+        setSelectedScreen={setSelectedScreen}
+      />
+      <Routes>
+        <Route path="/" element={<CreateForm />} />
+        <Route path="/list" element={<FormScreen />} />
+      </Routes>
+    </Box>
   );
 }
 
