@@ -263,6 +263,18 @@ function FormScreen() {
         )}
         <Box
           sx={{
+            display: "flex",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            ml: 2,
+          }}
+        >
+          <Typography variant="caption" fontWeight={"bold"}>
+            Sectors count from FormData
+          </Typography>
+        </Box>
+        <Box
+          sx={{
             mt: "15px",
             width: "100%",
             height: "100%",
