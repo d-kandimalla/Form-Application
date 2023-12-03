@@ -32,7 +32,7 @@ function CreateForm() {
   const [sectors, setSectors] = useState([]);
   const [cancelToken, setCancelToken] = useState(null);
   const [enableOptions, setEnableOptions] = useState(false);
-  const [showNotification, setShowNotification] = useState(true);
+  const [showNotification, setShowNotification] = useState(false);
   const [message, setMessage] = useState("");
   const [enableCreateForm, setEnableCreateForm] = useState(false);
 
