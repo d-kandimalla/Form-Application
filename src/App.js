@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import AppBar from "./AppBar";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom"; // Import HashRouter
 import FormScreen from "./FormScreen";
 import CreateForm from "./CreateForm";
 import { useState } from "react";
