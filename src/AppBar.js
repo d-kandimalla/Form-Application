@@ -6,11 +6,11 @@ function AppBar(props) {
   const { selectedScreen, setSelectedScreen } = props;
 
   useEffect(() => {
-    const location = window?.location?.pathname;
-    if (location === "/") {
-      return setSelectedScreen("create");
-    } else {
+    const location = window?.location?.hash?.split("/");
+    if (location[1] === "list") {
       return setSelectedScreen("list");
+    } else {
+      return setSelectedScreen("create");
     }
   });
 
